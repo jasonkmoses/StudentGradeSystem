@@ -3,7 +3,7 @@
 #include <fstream>
 std::ofstream f("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt", std::fstream::app);
 std::ifstream fout("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
-std::vector<std::string> AllInfo;
+std::string AllInfo[100];
 int input;
 void CreateEntries()
 {
@@ -100,23 +100,18 @@ void FindByStudentNumber() {
         std::cout<<"The word has been found "<<countwords<<" times."<<std::endl;
         if (countwords != 0)
         {
-        std::string word;
-    	int i = 0;
-    	while(fout >> word)
-    	{
-           ++i;
-           fout >> AllInfo.at(i);
-           std::cout<<AllInfo.at(i)<<std::endl;
-        }
+            for(int i = 0; i < 100; ++i)
+            {
+            fout >> AllInfo[i];
+            }
         if (std::find(AllInfo.begin(), AllInfo.end(), word) != AllInfo.end()) {
             for (int y = 0; y < 3; ++y)
             {
-            std::cout<<AllInfo.at(y)<<std::endl;
+            std::cout<<AllInfo[y]<<std::endl;
             }
-            fout.close();
         }
     }
-}
+  }
 }
 void ViewEntries()
  {
@@ -161,3 +156,4 @@ case 3:
 int main() {
 Menu();
 }
+
