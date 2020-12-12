@@ -8,7 +8,7 @@ int input;
 std::string file_contents = "";
 void deletef() {
     std::string str;
-    std::ifstream fout("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
+    std::ifstream fout("<REST OF DIR>/StudentGradeSystem/allGrades.txt");
     while (str != "q") {
         int t;
         std::string s;
@@ -26,7 +26,7 @@ void deletef() {
             file_contents += line;
             vectorOfStrings2.push_back(line + "\n");
         }
-            std::ofstream fout2("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
+            std::ofstream fout2("<REST OF DIR>/StudentGradeSystem/allGrades.txt");
                     for (int e = 0; e < vectorOfStrings2.size(); e++)
                     {
                     it = vectorOfStrings2.at(e).find(str);
@@ -60,8 +60,8 @@ void editf() {
     std::string fileInputStudentGrade;
     std::string fileInputStudentComment;
     std::string str;
-    std::ifstream fout("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
-    std::ofstream f("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt", std::fstream::app);
+    std::ifstream fout("<REST OF DIR>/StudentGradeSystem/allGrades.txt");
+    std::ofstream f("<REST OF DIR>/StudentGradeSystem/allGrades.txt", std::fstream::app);
     while (str != "q") {
         int t;
         std::string s;
@@ -79,7 +79,7 @@ void editf() {
             file_contents += line;
             vectorOfStrings2.push_back(line + "\n");
         }
-            std::ofstream fout2("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
+            std::ofstream fout2("<REST OF DIR>/StudentGradeSystem/allGrades.txt");
                     for (int e = 0; e < vectorOfStrings2.size(); e++)
                     {
                     it = vectorOfStrings2.at(e).find(str);
@@ -162,7 +162,7 @@ void editf() {
 if (str == "q" ) { fout.close(); }
 }
 void searchf() {
-    std::ifstream fout("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
+    std::ifstream fout("<REST OF DIR>/StudentGradeSystem/allGrades.txt");
     int t;
     std::string str;
     std::string line;
@@ -203,7 +203,7 @@ void searchf() {
 }
 }
 void createStudent() {
-    std::ofstream f("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt", std::fstream::app);
+    std::ofstream f("<REST OF DIR>/StudentGradeSystem/allGrades.txt", std::fstream::app);
     std::string fileInputStudentName;
     std::string fileInputStudentNumber;
     std::string fileInputStudentGrade;
@@ -287,7 +287,7 @@ case 4:
 }
 void ViewEntries()
  {
-    std::ifstream fout("/Users/jasonmoses/Desktop/C++/StudentGradeSystem/allGrades.txt");
+    std::ifstream fout("<REST OF DIR>/StudentGradeSystem/allGrades.txt");
     std::cout<<"1) View All Entries"<<std::endl;
     std::cout<<"2) Find Student by using Student Number"<<std::endl;
     std::cout<<"3) Exit"<<std::endl;
